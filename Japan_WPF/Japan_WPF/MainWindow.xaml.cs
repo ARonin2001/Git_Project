@@ -13,6 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using MySql.Data;
+using System.Windows.Media.Animation;
 
 namespace Japan_WPF
 {
@@ -21,9 +22,24 @@ namespace Japan_WPF
     /// </summary>
     public partial class MainWindow : Window
     {
+
         public MainWindow()
         {
             InitializeComponent();
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            MessageBox.Show("Hello Kotkin!");
+        }
+
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+
+            if (searchContent.Visibility == Visibility)
+                searchContent.Visibility = Visibility.Hidden;
+            else
+                searchContent.Visibility = Visibility;
         }
     }
 }
